@@ -1,0 +1,39 @@
+body {
+    font-family: verdana;
+    font-size: smaller;
+}
+table {
+    border-collapse: collapse;
+    border: 2px solid #000;
+}
+div.wrapper {
+    width: 800px;
+    border: 1px solid black;
+    padding: 25px;
+    overflow: auto;
+}
+div.matrix {
+    width: 40%;
+    float: left;
+}
+div.key {
+    width: 60%;
+    float: right;
+}
+td {
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+th {
+    padding: 10px;
+    border: 1px solid #000;
+}
+td.avail {
+    background-color: #4874FC;
+}
+td.unavail {
+    background-color: #FFF;
+}

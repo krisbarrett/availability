@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="avail-style.css" />
+<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("td").click(function(){
+    if($(this).hasClass("avail")) {
+        $(this).removeClass("avail");
+        $(this).addClass("unavail");
+        $(this).find("input").val("unavail");
+        
+    }
+    else if($(this).hasClass("unavail")) {
+        $(this).removeClass("unavail");
+        $(this).addClass("avail");
+        $(this).find("input").val("avail");
+    }
+  });
+});
+</script>
+<title>Availability</title>
+</head>
+<body>
+<div class="wrapper">
+<h1>Availability</h1>
+<table>
+<tr>
+<th></th>
+<th>Sun</th>
+<th>Mon</th>
+<th>Tue</th>
+<th>Wed</th>
+<th>Thu</th>
+<th>Fri</th>
+<th>Sat</th>
+</tr>
+<tr>
+<td>12:00</td>
+<td class="unavail"><input type="hidden" name="sun-12-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-12-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-12-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-12-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-12-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-12-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-12-00" value="unavail"/></td>
+</tr>
+<td>12:30</td>
+<td class="unavail"><input type="hidden" name="sun-12-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-12-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-12-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-12-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-12-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-12-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-12-30" value="unavail"/></td>
+</tr>
+<td >1:00</td>
+<td class="unavail"><input type="hidden" name="sun-1-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-1-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-1-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-1-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-1-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-1-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-1-00" value="unavail"/></td>
+</tr>
+<td >1:30</td>
+<td class="unavail"><input type="hidden" name="sun-1-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-1-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-1-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-1-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-1-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-1-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-1-30" value="unavail"/></td>
+</tr>
+<td >2:00</td>
+<td class="unavail"><input type="hidden" name="sun-2-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-2-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-2-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-2-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-2-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-2-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-2-00" value="unavail"/></td>
+</tr>
+<td >2:30</td>
+<td class="unavail"><input type="hidden" name="sun-2-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-2-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-2-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-2-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-2-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-2-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-2-30" value="unavail"/></td>
+</tr>
+<td >3:00</td>
+<td class="unavail"><input type="hidden" name="sun-3-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-3-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-3-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-3-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-3-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-3-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-3-00" value="unavail"/></td>
+</tr>
+<td >3:30</td>
+<td class="unavail"><input type="hidden" name="sun-3-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-3-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-3-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-3-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-3-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-3-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-3-30" value="unavail"/></td>
+</tr>
+<td >4:00</td>
+<td class="unavail"><input type="hidden" name="sun-4-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-4-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-4-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-4-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-4-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-4-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-4-00" value="unavail"/></td>
+</tr>
+<td >4:30</td>
+<td class="unavail"><input type="hidden" name="sun-4-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-4-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-4-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-4-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-4-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-4-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-4-30" value="unavail"/></td>
+</tr>
+<td >5:00</td>
+<td class="unavail"><input type="hidden" name="sun-5-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-5-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-5-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-5-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-5-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-5-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-5-00" value="unavail"/></td>
+</tr>
+<td >5:30</td>
+<td class="unavail"><input type="hidden" name="sun-5-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-5-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-5-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-5-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-5-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-5-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-5-30" value="unavail"/></td>
+</tr>
+<td >6:00</td>
+<td class="unavail"><input type="hidden" name="sun-6-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-6-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-6-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-6-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-6-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-6-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-6-00" value="unavail"/></td>
+</tr>
+<td >6:30</td>
+<td class="unavail"><input type="hidden" name="sun-6-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-6-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-6-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-6-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-6-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-6-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-6-30" value="unavail"/></td>
+</tr>
+<td >7:00</td>
+<td class="unavail"><input type="hidden" name="sun-7-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-7-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-7-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-7-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-7-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-7-00" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-7-00" value="unavail"/></td>
+</tr>
+<td >7:30</td>
+<td class="unavail"><input type="hidden" name="sun-7-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="mon-7-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="tue-7-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="wed-7-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="thu-7-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="fri-7-30" value="unavail"/></td>
+<td class="unavail"><input type="hidden" name="sat-7-30" value="unavail"/></td>
+</tr>
+</table>
+<br/>
+<table>
+<tr>
+<td>Available</td><td class="avail"></td>
+</tr>
+<tr>
+<td>Unavailable</td><td class="unavail"></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
