@@ -6,17 +6,6 @@ table {
     border-collapse: collapse;
     border: 2px solid #000;
 }
-table.noborders {
-    border-style: none;
-}
-td.noborders {
-    padding: 10px;
-    border-style: none;
-    vertical-align: top;
-}
-tr.noborders {
-    border-style: none;
-}
 div.wrapper {
     width: 800px;
     border: 1px solid black;

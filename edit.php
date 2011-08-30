@@ -1,13 +1,5 @@
 <?php
-$days = array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
-$hours = array('12','1','2','3','4','5','6','7');
-$minutes = array('00','30');
-$user = 'avail_user';
-$pass = 'avail_pass';
-$mysqli_host = 'localhost';
-$mysqli_user = 'avail_user';
-$mysqli_pass = 'avail_pass';
-$mysqli_db = 'avail';
+require 'vars.php';
 
 if(!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) || 
    $_SERVER['PHP_AUTH_USER'] != $user || $_SERVER['PHP_AUTH_PW'] != $pass) {
@@ -16,8 +8,6 @@ if(!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) ||
     echo 'You are not authorized to view this page.';
     exit;
 }
-
-$mysqli = new mysqli($mysqli_host,$mysqli_user,$mysqli_pass,$mysqli_db);
 
 if(isset($_POST['submit'])) {
     foreach($hours as $hour) {
@@ -32,11 +22,7 @@ if(isset($_POST['submit'])) {
 }
 
 $result = $mysqli->query("select * from avail");
-
-$timeslots = array();
-
 while ($row = $result->fetch_object()) {
-	/* echo "$row->id: $row->timeslot: $row->avail\n"; */
 	$timeslots[$row->timeslot] = $row->avail;
 }
 ?>
@@ -44,8 +30,8 @@ while ($row = $result->fetch_object()) {
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="avail-style.css">
-<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="js/jquery-1.6.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
   $("td").click(function(){
@@ -78,7 +64,7 @@ foreach($days as $day) {
 }
 ?>
 </tr>
-<form name="availability" action="avail-mgr.php" method="post">
+<form name="availability" action="edit.php" method="post">
 <?php
 foreach($hours as $hour) {
     foreach($minutes as $min) {

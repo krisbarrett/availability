@@ -1,27 +1,18 @@
 <?php
-$days = array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
-$hours = array('12','1','2','3','4','5','6','7');
-$minutes = array('00','30');
+require 'vars.php';
 
-$mysqli_host = 'localhost';
-$mysqli_user = 'avail_user';
-$mysqli_pass = 'avail_pass';
-$mysqli_db = 'avail';
-
-$mysqli = new mysqli($mysqli_host,$mysqli_user,$mysqli_pass,$mysqli_db);
 $result = $mysqli->query("select * from avail");
-
-$timeslots = array();
 
 while ($row = $result->fetch_object()) {
 	$timeslots[$row->timeslot] = $row->avail;
 }
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="avail-style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <title>Availability</title>
 </head>
 <body>
@@ -50,6 +41,8 @@ foreach($hours as $hour) {
 }
 ?>
 </table>
+<br>
+<a href="edit.php">Manage</a>
 </div>
 <div class="key">
 <table>
