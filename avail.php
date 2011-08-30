@@ -14,7 +14,6 @@ $result = $mysqli->query("select * from avail");
 $timeslots = array();
 
 while ($row = $result->fetch_object()) {
-	/* echo "$row->id: $row->timeslot: $row->avail\n"; */
 	$timeslots[$row->timeslot] = $row->avail;
 }
 ?>
@@ -28,6 +27,7 @@ while ($row = $result->fetch_object()) {
 <body>
 <div class="wrapper">
 <h1>Availability</h1>
+<div class="matrix">
 <table>
 <tr>
 <td></td>
@@ -50,15 +50,17 @@ foreach($hours as $hour) {
 }
 ?>
 </table>
-<br>
+</div>
+<div class="key">
 <table>
 <tr>
-<td>Available</td><td class="avail"></td>
+<td>Available</td><td class="key1"></td>
 </tr>
 <tr>
-<td>Unavailable</td><td class="unavail"></td>
+<td>Unavailable</td><td class="key2"></td>
 </tr>
 </table>
+</div>
 </div>
 </body>
 </html>

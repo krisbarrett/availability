@@ -6,6 +6,17 @@ table {
     border-collapse: collapse;
     border: 2px solid #000;
 }
+table.noborders {
+    border-style: none;
+}
+td.noborders {
+    padding: 10px;
+    border-style: none;
+    vertical-align: top;
+}
+tr.noborders {
+    border-style: none;
+}
 div.wrapper {
     width: 800px;
     border: 1px solid black;
@@ -13,11 +24,11 @@ div.wrapper {
     overflow: auto;
 }
 div.matrix {
-    width: 40%;
+    width: 60%;
     float: left;
 }
 div.key {
-    width: 60%;
+    width: 40%;
     float: right;
 }
 td {
@@ -35,5 +46,11 @@ td.avail {
     background-color: #4874FC;
 }
 td.unavail {
+    background-color: #FFF;
+}
+td.key1 {
+    background-color: #4874FC;
+}
+td.key2 {
     background-color: #FFF;
 }

@@ -24,7 +24,8 @@ if(isset($_POST['submit'])) {
         foreach($minutes as $min) {
             foreach($days as $day) {
                 $slot = "$day-$hour-$min";
-                $mysqli->query("update avail set avail='$_POST[$slot]' where timeslot='$slot'");
+                $avail = $mysqli->real_escape_string($_POST[$slot]);
+                $mysqli->query("update avail set avail='$avail' where timeslot='$slot'");
             }
         }
     }    
@@ -67,6 +68,7 @@ $(document).ready(function(){
 <body>
 <div class="wrapper">
 <h1>Availability Manager</h1>
+<div class="matrix">
 <table>
 <tr>
 <td></td>
@@ -91,17 +93,19 @@ foreach($hours as $hour) {
 ?>
 </table>
 <br>
-<table>
-<tr>
-<td>Available</td><td class="avail"></td>
-</tr>
-<tr>
-<td>Unavailable</td><td class="unavail"></td>
-</tr>
-</table>
-<br>
 <input type="submit" name='submit' value="Save">
 </form>
+</div>
+<div class="key">
+<table>
+<tr>
+<td>Available</td><td class="key1"></td>
+</tr>
+<tr>
+<td>Unavailable</td><td class="key2"></td>
+</tr>
+</table>
+</div>
 </div>
 </body>
 </html>
