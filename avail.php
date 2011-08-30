@@ -2,30 +2,27 @@
 $days = array('sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat');
 $hours = array('12','1','2','3','4','5','6','7');
 $minutes = array('00','30');
+
+$mysqli_host = 'localhost';
+$mysqli_user = 'avail_user';
+$mysqli_pass = 'avail_pass';
+$mysqli_db = 'avail';
+
+$mysqli = new mysqli($mysqli_host,$mysqli_user,$mysqli_pass,$mysqli_db);
+$result = $mysqli->query("select * from avail");
+
+$timeslots = array();
+
+while ($row = $result->fetch_object()) {
+	/* echo "$row->id: $row->timeslot: $row->avail\n"; */
+	$timeslots[$row->timeslot] = $row->avail;
+}
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="avail-style.css">
-<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-  $("td").click(function(){
-    if($(this).hasClass("avail")) {
-        $(this).removeClass("avail");
-        $(this).addClass("unavail");
-        $(this).find("input").val("unavail");
-        
-    }
-    else if($(this).hasClass("unavail")) {
-        $(this).removeClass("unavail");
-        $(this).addClass("avail");
-        $(this).find("input").val("avail");
-    }
-  });
-});
-</script>
 <title>Availability</title>
 </head>
 <body>
@@ -45,7 +42,8 @@ foreach($hours as $hour) {
     foreach($minutes as $min) {
         echo "<tr><td>$hour:$min</td>";
         foreach($days as $day) {
-            echo "<td class=\"unavail\"><input type=\"hidden\" name=\"$day-$hour-$min\" value=\"unavail\"></td>";
+            $slot = "$day-$hour-$min";
+            echo "<td class=\"$timeslots[$slot]\"></td>";
         }
         echo "</tr>";
     }
