@@ -1,0 +1,23 @@
+About
+
+Availability is a small web app that allows you to display and manage your availability on your website.  Availability can be embedded into sites such as wordpress using an iframe.
+
+Author
+
+Kris Barrett (krisbarrett@gmail.com)
+
+Licencse
+
+Creative Commons Attribution-ShareAlike 3.0 (http://creativecommons.org/licenses/by-sa/3.0/legalcode)
+
+Installation
+
+1. Create a public directory for availability on your web host.
+2. Copy the availability files into the new directory.
+3. Create a new database and use the provided sql file to generate the required database entries.
+4. Edit the mysqli variables in vars.php to match your database information.
+5. Change the username and password for the managment page by changing the user and pass variables in vars.php.
+
+Known Limitations
+
+1. Settings are hard-coded.  Availability only allows you to display your availability in half-hour blocks from 12pm - 7:30pm, Monday through Sunday.
